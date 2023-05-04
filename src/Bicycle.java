@@ -1,9 +1,16 @@
-public class Bicycle {
+public class Bicycle extends Auto {
+    public Bicycle(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount);
+    }
 
-    public String modelName;
-    public int wheelsCount;
+    public Bicycle() {
 
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    }
+
+    public void check() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
     }
 }
