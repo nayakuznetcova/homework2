@@ -14,6 +14,14 @@ public abstract class Auto implements AutoCheck{
     public void check(){
 
     }
+
+    public void checkTires(){
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            System.out.println("Меняем покрышку");
+        }
+    }
+
     public String getModelName() {
         return modelName;
     }

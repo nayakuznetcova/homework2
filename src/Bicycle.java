@@ -8,9 +8,6 @@ public class Bicycle extends Auto {
     }
 
     public void check() {
-        System.out.println("Обслуживаем " + getModelName());
-        for (int i = 0; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку");
-        }
+        checkTires();
     }
 }

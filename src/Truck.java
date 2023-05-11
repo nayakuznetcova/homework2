@@ -1,4 +1,4 @@
-public class Truck extends Auto{
+public class Truck extends AutoEngine{
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
@@ -7,11 +7,8 @@ public class Truck extends Auto{
     }
 
     public void check() {
-        System.out.println("Обслуживаем " + getModelName());
-        for (int i = 0; i < getWheelsCount(); i++) {
-            System.out.println("Меняем покрышку");
-        }
-        System.out.println("Проверяем двигатель");
+        checkTires();
+        checkEngine();
         System.out.println("Проверяем прицеп");
     }
 }
